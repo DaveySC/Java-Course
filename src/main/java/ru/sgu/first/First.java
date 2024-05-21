@@ -13,5 +13,6 @@ public class First {
             System.out.println(animal.getNameOfAnimal());
             System.out.println(animal.getNoise());
         }
+        
     }
 }
