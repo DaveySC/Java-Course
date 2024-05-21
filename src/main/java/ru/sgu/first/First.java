@@ -11,6 +11,8 @@ public class First {
     List<ObjToCompare> objects;
 
     public First() throws IOException {
+        //constructor -> to init
+        //в solve засунуть
         br = new BufferedReader(new FileReader("src/main/java/ru/sgu/first/resources/input.txt"));
         objects = new ArrayList<>();
     }
@@ -21,7 +23,7 @@ public class First {
             first = new First();
         } catch (IOException e) {
             System.out.println("Something wrong with files");
-            System.exit(1);
+            return;
         }
         first.solve();
     }
@@ -47,7 +49,6 @@ public class First {
             }
         } catch (IOException | IllegalArgumentException e) {
             System.out.println("Wrong Data!");
-            System.exit(1);
         }
     }
 }

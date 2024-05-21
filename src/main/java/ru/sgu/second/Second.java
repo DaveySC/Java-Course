@@ -17,6 +17,8 @@ public class Second {
     private FileOutputStream fileOutputStream = null;
     private ZipOutputStream zipOutputStream = null;
 
+
+    //не открывать ресурсы (чтобы не плевался ошибками)
     public Second() {
         scanner = new Scanner(System.in);
         System.out.println("Enter dir path");
