@@ -27,6 +27,6 @@ public class District implements Locality{
 
     @Override
     public void printLocalityName() {
-        System.out.println(getClass().getSimpleName());
+        System.out.println(this.name);
     }
 }
