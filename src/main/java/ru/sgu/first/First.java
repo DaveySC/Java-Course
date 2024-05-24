@@ -1,18 +1,32 @@
 package main.java.ru.sgu.first;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.Scanner;
 
 public class First {
-    public static void main(String[] args) {
-        List<Animal> animals = new ArrayList<>();
-        animals.add(new Cat("Barsik"));
-        animals.add(new Dog("super dog"));
+    public static void main(String[] args) throws ParseException {
+        Scanner scanner = new Scanner(System.in);
 
-        for (Animal animal : animals) {
-            System.out.println(animal.getNameOfAnimal());
-            System.out.println(animal.getNoise());
-        }
-        
+
+        String firstDateStr =  scanner.nextLine();
+        String secondDateStr = scanner.nextLine();
+
+
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy MM dd");
+        Date first = simpleDateFormat.parse(firstDateStr);
+        Date second = simpleDateFormat.parse(secondDateStr);
+
+        long milliseconds = Math.abs(first.getTime() - second.getTime());
+
+        int days = (int) (milliseconds / (24 * 60 * 60 * 1000));
+        System.out.println("Разница в днях :" + days);
     }
+
+
+
 }
